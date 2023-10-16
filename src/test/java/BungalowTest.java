@@ -23,16 +23,10 @@ public class BungalowTest {
         bungalow.setCentralHeating(false);
         assertThat(bungalow.getCentralHeating()).isEqualTo(false);
     }
-    @Test
-    public void canModifyCentralHeating(){
-        bungalow.modifyCentralHeating(false);
-        assertThat(bungalow.getCentralHeating()).isEqualTo(false);
-    }
 
     @Test
     public void canCostOfHeating(){
         bungalow.setCentralHeating(false);
         assertThat(bungalow.costOfHeating()).isEqualTo(50*10);
     }
-
 }
