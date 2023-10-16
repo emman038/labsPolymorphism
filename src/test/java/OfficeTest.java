@@ -9,7 +9,7 @@ public class OfficeTest {
 
     @BeforeEach
     public void setUp(){
-        office = new Office(5, 2005, 100000,"Sky Blue", 10000, 5000);
+        office = new Office(5, 2005, 100000,"Croydon Branch", 10000, 5000);
     }
 
     @Test
