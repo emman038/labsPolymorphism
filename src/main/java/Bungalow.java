@@ -6,6 +6,18 @@ public class Bungalow {
         this.size = size;
     }
 
+    public void modifyCentralHeating(boolean centralHeating){
+        this.centralHeating = centralHeating;
+    }
+
+    public int costOfHeating(){
+        if (getCentralHeating()){
+            return 500;
+        } else {
+            return 50 * this.size;
+        }
+    }
+
     public void setSize(int size) {
         this.size = size;
     }
