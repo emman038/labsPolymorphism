@@ -8,6 +8,14 @@ public class RealEstateAgent {
         this.portfolio = portfolio;
     }
 
+    public int calculateValueOfPortfolio(){
+        int total = 0;
+        for (Building building: this.portfolio) {
+            total += building.getValue();
+        }
+        return total;
+    }
+
     public String getName() {
         return this.name;
     }

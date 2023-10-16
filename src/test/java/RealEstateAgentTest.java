@@ -47,4 +47,9 @@ public class RealEstateAgentTest {
         realEstateAgent.setPortfolio(portfolio2);
         assertThat(realEstateAgent.getPortfolio()).isEqualTo(portfolio2);
     }
+
+    @Test
+    public void canCalculateValueOfPortfolio(){
+        assertThat(realEstateAgent.calculateValueOfPortfolio()).isEqualTo(2100000);
+    }
 }
