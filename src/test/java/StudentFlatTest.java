@@ -9,7 +9,7 @@ public class StudentFlatTest {
 
     @BeforeEach
     public void setUp(){
-        studentFlat = new StudentFlat(10, 5);
+        studentFlat = new StudentFlat(5, 2005, 100000,10, 5);
     }
 
     @Test

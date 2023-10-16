@@ -5,11 +5,11 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BungalowTest {
 
-    Bungalow bungalow;
+    Bungalow  bungalow;
 
     @BeforeEach
     public void setUP(){
-        bungalow = new Bungalow(true, 10);
+        bungalow = new Bungalow(5, 2005, 100000, true, 10);
     }
 
     @Test

@@ -1,7 +1,8 @@
-public class Bungalow {
+public class Bungalow extends Building{
     boolean centralHeating;
     int size;
-    public Bungalow(boolean centralHeating, int size) {
+    public Bungalow(int numberOfRooms, int dateOfConstruction, int value, boolean centralHeating, int size) {
+        super(numberOfRooms, dateOfConstruction, value);
         this.centralHeating = centralHeating;
         this.size = size;
     }

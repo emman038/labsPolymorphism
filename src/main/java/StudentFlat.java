@@ -1,7 +1,8 @@
-public class StudentFlat {
+public class StudentFlat extends Building{
     public int numberOfPartiesHosted;
     public int numberOfStudents;
-    public StudentFlat(int numberOfPartiesHosted, int numberOfStudents) {
+    public StudentFlat(int numberOfRooms, int dateOfConstruction, int value, int numberOfPartiesHosted, int numberOfStudents) {
+        super(numberOfRooms, dateOfConstruction, value);
         this.numberOfPartiesHosted = numberOfPartiesHosted;
         this.numberOfStudents = numberOfStudents;
     }

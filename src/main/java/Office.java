@@ -1,12 +1,17 @@
-public class Office {
+public class Office extends Building {
     String companyName;
     int income;
     int outgoings;
 
-    public Office(String companyName, int income, int outgoings){
+    public Office(int numberOfRooms, int dateOfConstruction, int value, String companyName, int income, int outgoings){
+        super(numberOfRooms, dateOfConstruction, value);
         this.companyName = companyName;
         this.income = income;
         this.outgoings = outgoings;
+    }
+
+    public int calculateProfit(){
+        return this.income - this.outgoings;
     }
 
     public String getCompanyName() {
