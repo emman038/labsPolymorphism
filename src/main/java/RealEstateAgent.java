@@ -16,6 +16,14 @@ public class RealEstateAgent {
         return total;
     }
 
+    public void buyBuilding(Building building){
+        this.portfolio.add(building);
+    }
+
+    public void sellBuilding(Building building){
+        this.portfolio.remove(building);
+    }
+
     public String getName() {
         return this.name;
     }

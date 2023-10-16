@@ -52,4 +52,17 @@ public class RealEstateAgentTest {
     public void canCalculateValueOfPortfolio(){
         assertThat(realEstateAgent.calculateValueOfPortfolio()).isEqualTo(2100000);
     }
+
+    @Test
+    public void canBuyBuilding(){
+        Bungalow bungalow2 = new Bungalow(3,2005,500000, true, 10000);
+        realEstateAgent.buyBuilding(bungalow2);
+        assertThat(realEstateAgent.getPortfolio().size()).isEqualTo(4);
+    }
+
+    @Test
+    public void canSellBuilding(){
+        realEstateAgent.sellBuilding(office);
+        assertThat(realEstateAgent.getPortfolio().size()).isEqualTo(2);
+    }
 }
