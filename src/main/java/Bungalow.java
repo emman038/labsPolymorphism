@@ -1,10 +1,21 @@
 public class Bungalow extends Building{
-    boolean centralHeating;
-    int size;
+    private boolean centralHeating;
+    private int size;
+    private int floors;
     public Bungalow(int numberOfRooms, int dateOfConstruction, int value, boolean centralHeating, int size) {
         super(numberOfRooms, dateOfConstruction, value);
         this.centralHeating = centralHeating;
         this.size = size;
+        this.floors = 1;
+    }
+
+    public String addFloors(int numberOfFloors){
+        if (this.floors >= 2){
+            return "I can't add more floors";
+        } else {
+            this.floors += numberOfFloors;
+            return "You've successfully added a new floor. My new number of floors is " + this.floors;
+        }
     }
 
     public int costOfHeating(){

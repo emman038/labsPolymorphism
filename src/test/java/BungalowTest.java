@@ -35,4 +35,9 @@ public class BungalowTest {
         bungalow.setCentralHeating(false);
         assertThat(bungalow.costOfHeating(10)).isEqualTo(600);
     }
+
+    @Test
+    public void addFloors(){
+        assertThat(bungalow.addFloors(1)).isEqualTo("You've successfully added a new floor. My new number of floors is 2");
+    }
 }

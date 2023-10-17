@@ -29,4 +29,9 @@ public class StudentFlatTest {
         studentFlat.evictStudent();
         assertThat(studentFlat.getNumberOfStudents()).isEqualTo(4);
     }
+
+    @Test
+    public void addFloors(){
+        assertThat(studentFlat.addFloors(1)).isEqualTo("You've successfully added a new floor. My new number of floors is 4");
+    }
 }

@@ -1,10 +1,21 @@
 public class StudentFlat extends Building{
-    public int numberOfPartiesHosted;
-    public int numberOfStudents;
+    private int numberOfPartiesHosted;
+    private int numberOfStudents;
+    private int floors;
     public StudentFlat(int numberOfRooms, int dateOfConstruction, int value, int numberOfPartiesHosted, int numberOfStudents) {
         super(numberOfRooms, dateOfConstruction, value);
         this.numberOfPartiesHosted = numberOfPartiesHosted;
         this.numberOfStudents = numberOfStudents;
+        this.floors = 3;
+    }
+
+    public String addFloors(int numberOfFloors){
+        if (this.floors >= 5){
+            return "I can't add more floors. I have maxed out at 5 floors.";
+        } else {
+            this.floors += numberOfFloors;
+            return "You've successfully added a new floor. My new number of floors is " + this.floors;
+        }
     }
 
     public boolean hostedTooManyParties(){

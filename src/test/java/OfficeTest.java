@@ -34,4 +34,9 @@ public class OfficeTest {
     public void canCalculateProfit(){
         assertThat(office.calculateProfit()).isEqualTo(5000);
     }
+
+    @Test
+    public void addFloors(){
+        assertThat(office.addFloors(1)).isEqualTo("You can't add another floor, get new office space if you want more room");
+    }
 }
