@@ -27,6 +27,12 @@ public class BungalowTest {
     @Test
     public void canCostOfHeating(){
         bungalow.setCentralHeating(false);
-        assertThat(bungalow.costOfHeating()).isEqualTo(50*10);
+        assertThat(bungalow.costOfHeating()).isEqualTo(500);
+    }
+
+    @Test
+    public void canCostOfHeating__WithArgument(){
+        bungalow.setCentralHeating(false);
+        assertThat(bungalow.costOfHeating(10)).isEqualTo(600);
     }
 }

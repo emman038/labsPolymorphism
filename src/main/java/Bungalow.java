@@ -15,6 +15,14 @@ public class Bungalow extends Building{
         }
     }
 
+    public int costOfHeating(int additionalCosts){
+        if (getCentralHeating()){
+            return 500 + additionalCosts;
+        } else {
+            return (50 + additionalCosts) * this.size;
+        }
+    }
+
     public void setSize(int size) {
         this.size = size;
     }
