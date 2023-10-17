@@ -1,4 +1,8 @@
-public class Bungalow extends Building{
+package models;
+
+import interfaces.Councilable;
+
+public class Bungalow extends Building implements Councilable {
     private boolean centralHeating;
     private int size;
     private int floors;
@@ -7,6 +11,10 @@ public class Bungalow extends Building{
         this.centralHeating = centralHeating;
         this.size = size;
         this.floors = 1;
+    }
+
+    public int countTax(){
+        return this.floors * 500 * this.size;
     }
 
     public String addFloors(int numberOfFloors){

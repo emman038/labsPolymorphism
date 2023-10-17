@@ -1,3 +1,5 @@
+package models;
+
 public class Office extends Building {
     private String companyName;
     private int income;

@@ -1,3 +1,4 @@
+import models.StudentFlat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +32,12 @@ public class StudentFlatTest {
     }
 
     @Test
-    public void addFloors(){
+    public void canAddFloors(){
         assertThat(studentFlat.addFloors(1)).isEqualTo("You've successfully added a new floor. My new number of floors is 4");
+    }
+
+    @Test
+    public void canCountTax(){
+        assertThat(studentFlat.countTax()).isEqualTo(7500);
     }
 }

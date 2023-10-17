@@ -1,3 +1,4 @@
+import models.Bungalow;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -5,7 +6,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BungalowTest {
 
-    Bungalow  bungalow;
+    Bungalow bungalow;
 
     @BeforeEach
     public void setUP(){
@@ -39,5 +40,10 @@ public class BungalowTest {
     @Test
     public void addFloors(){
         assertThat(bungalow.addFloors(1)).isEqualTo("You've successfully added a new floor. My new number of floors is 2");
+    }
+
+    @Test
+    public void canCountTax(){
+        assertThat(bungalow.countTax()).isEqualTo(5000);
     }
 }

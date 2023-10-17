@@ -1,4 +1,8 @@
-public class StudentFlat extends Building{
+package models;
+
+import interfaces.Councilable;
+
+public class StudentFlat extends Building implements Councilable {
     private int numberOfPartiesHosted;
     private int numberOfStudents;
     private int floors;
@@ -7,6 +11,10 @@ public class StudentFlat extends Building{
         this.numberOfPartiesHosted = numberOfPartiesHosted;
         this.numberOfStudents = numberOfStudents;
         this.floors = 3;
+    }
+
+    public int countTax(){
+        return this.floors * numberOfStudents * 500;
     }
 
     public String addFloors(int numberOfFloors){
